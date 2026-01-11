@@ -21,6 +21,31 @@ display: block;
 margin-left: auto;
 margin-right: auto
 ;}
+nav {background: #000;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 10000;
+border-bottom: 5px solid var(--cap-red);
+padding: 20px 0;
+text-align: center;
+box-shadow: 0 5px 20px #000;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+margin: 0 25px;
+font-weight: 900;
+text-transform: uppercase;
+font-size: 0.85rem;
+letter-spacing: 3px;
+transition: 0.4s;
+}
+nav a:hover {
+color:blue;
+text-shadow: 0 0 15px var(--cap-gold);
+}
 
 </style>
 <title>The Total Mission Chronology</title>
@@ -29,10 +54,16 @@ margin-right: auto
   background: rgba(255,255,255,0.7) url('shield1.png') no-repeat center fixed; 
   background-size: contain; 
   background-blend-mode: lighten;
-">  
-<fieldset>
-<section id="history">
-<h2 style = "color:red">total<span style="color:slategrey"> Mission</span> <span style="color:mediumblue"> Chronology</span></h2><br><br>
+"> 
+<nav> 
+<a href="index.html">Home</a>
+<a href="cap6.html">Shield Dynamics</a>
+<a href="cap3.html">Personnel Archive</a>
+<a href="cap4.html">2026 Status</a>
+	</nav>
+	<fieldset>
+	<section id="history">
+	<h2 style = "color:red">total<span style="color:slategrey"> Mission</span> <span style="color:mediumblue"> Chronology</span></h2><br><br>
 
 <h4>1941:The Genesis</h4>
 <p>Real World: Joe Simon and Jack Kirby create Steve Rogers for Timely Comics.<br>
