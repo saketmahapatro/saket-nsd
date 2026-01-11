@@ -1,447 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAPTAIN AMERICA | THE 2026 MEGA-OMNIBUS (1941-2026)</title>
-    <!-- 
-        ============================================================
-        CAPTAIN AMERICA: SENTINEL OF LIBERTY TOTAL ARCHIVE
-        VERSION: 2026.01.10
-        ENCRYPTION: LEVEL 5 (S.H.I.E.L.D. RESTORED)
-        ============================================================
-    -->
-    <style>
-        /* 
-           ============================================================
-           CSS ARCHITECTURE (VERTICALLY EXPANDED FOR NOTEPAD++)
-           ============================================================ 
-        */
-        :root {
-            --cap-blue: #002d5c;
-            --cap-red: #e23636;
-            --cap-white: #ffffff;
-            --cap-gold: #f0a500;
-            --vibranium-cyan: #00f2ff;
-            --bg-dark: #020617;
-            --bg-card: #0f172a;
-            --accent-glow: rgba(226, 54, 54, 0.4);
-        }
+<style>
+h1{font-size: 6.6rem;text-transform:uppercase;color:white;text-align:center;font-family:fantasy;letter-spacing: 3px;
+  }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+p{color:white;font-size: 1.5rem}
 
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--cap-white);
-            line-height: 2.2;
-            scroll-behavior: smooth;
-        }
+h2{font-size: 2rem;text-transform:uppercase;color:gold;text-align:center}
 
-        /* Massive Vertical Navigation */
-        nav {
-            background: #000;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 10000;
-            border-bottom: 5px solid var(--cap-red);
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 5px 20px #000;
-        }
+h3{color:orange;text-align:center;font-size: 2rem;text-transform:uppercase;font-family:cursive}
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 25px;
-            font-weight: 900;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 3px;
-            transition: 0.4s;
-        }
+#hori-center {display: block;margin-left: auto;margin-right: auto;}
 
-        nav a:hover {
-            color: var(--cap-gold);
-            text-shadow: 0 0 15px var(--cap-gold);
-        }
+h4{color:gold;font-size: 2.2rem}
 
-        /* 100vh Hero Header */
-        header {
-            height: 100vh;
-            background: radial-gradient(circle, var(--cap-blue) 0%, #000 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            border-bottom: 20px solid var(--cap-red);
-        }
+h5{color:red;font-size: 2rem}
 
-        .shield-logo {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            border: 10px solid var(--cap-white);
-            background: radial-gradient(circle, #fff 20%, var(--cap-blue) 20%, var(--cap-blue) 45%, var(--cap-red) 45%, var(--cap-red) 70%, var(--cap-white) 70%, var(--cap-white) 85%, var(--cap-red) 85%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 8rem;
-            color: #fff;
-            box-shadow: 0 0 100px var(--accent-glow);
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 7rem;
-            letter-spacing: -6px;
-            text-transform: uppercase;
-            font-weight: 900;
-            line-height: 0.9;
-        }
-
-        /* 2026 Alert Banner */
-        .alert-2026 {
-            background: var(--cap-red);
-            padding: 25px;
-            text-align: center;
-            font-weight: 900;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            border-bottom: 5px solid var(--cap-gold);
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1400px;
-            margin: auto;
-            padding: 100px 30px;
-        }
-
-        section {
-            margin-bottom: 200px;
-            padding: 80px;
-            background: var(--bg-card);
-            border-radius: 30px;
-            border: 1px solid #1e293b;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-
-        h2 {
-            font-size: 2.7rem;
-            color: var(--cap-gold);
-            text-transform: uppercase;
-            margin-bottom: 60px;
-            border-left: 20px solid var(--cap-red);
-            padding-left: 30px;
-        }
-
-        h3 {
-            color: var(--cap-red);
-            font-size: 2.2rem;
-            margin: 40px 0 20px;
-            text-transform: uppercase;
-        }
-
-        /* Technical Grid */
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 50px;
-            margin-top: 50px;
-        }
-
-        .data-card {
-            background: #000;
-            padding: 40px;
-            border: 2px solid #1e293b;
-            border-radius: 20px;
-            transition: 0.5s;
-        }
-
-        .data-card:hover {
-            border-color: var(--vibranium-cyan);
-            box-shadow: 0 0 30px var(--vibranium-cyan);
-        }
-
-        /* Extended Table Formatting */
-        .mega-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 60px;
-        }
-
-        .mega-table th, .mega-table td {
-            padding: 30px;
-            text-align: left;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .mega-table th {
-            background: #000;
-            color: var(--cap-gold);
-            font-size: 1.2rem;
-            text-transform: uppercase;
-        }
-
-        /* Timeline Items */
-        .timeline-item {
-            margin-bottom: 60px;
-            padding-left: 30px;
-            border-left: 5px solid var(--cap-red);
-        }
-
-        .year-header {
-            font-size: 2rem;
-            color: var(--cap-gold);
-            font-weight: 900;
-            display: block;
-        }
-
-        footer {
-            background: #000;
-            padding: 150px 30px;
-            text-align: center;
-            border-top: 15px solid var(--cap-red);
-        }
-		#hori-center {
-display: block;
-margin-left: auto;
-margin-right: auto;
+nav {background: #000;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 10000;
+border-bottom: 5px solid var(--cap-red);
+padding: 20px 0;
+text-align: center;
+box-shadow: 0 5px 20px #000;
 }
-    </style>
+
+nav a {
+color: #fff;
+text-decoration: none;
+margin: 0 25px;
+font-weight: 900;
+text-transform: uppercase;
+font-size: 0.85rem;
+letter-spacing: 3px;
+transition: 0.4s;
+}
+nav a:hover {
+color:blue;
+text-shadow: 0 0 15px var(--cap-gold);
+}
+ .element {
+  background: radial-gradient(center, blue);
+}
+ 
+		.container {
+  position: relative;
+  display: inline-block; /* Fits the size of the image */
+}
+
+.main-img {
+  display: block;
+  width: 100%; /* Adjust as needed */
+}
+
+.watermark-img {
+  position: absolute;
+  bottom: 100000000px;  
+  right: 100000000px;   
+  width: 50000000px;   
+  opacity: 0.4;  
+  pointer-events: none; 
+}
+</style>
+<title>Captain America:The Heart and Soul of the Avengers</title>
 </head>
-<body>
+<body style="background-color:black">
 
+
+<hr style="background-color: red; height: 8px; border: none;">
 <nav>
-    <a href="#history">Historical Records</a>
-    <a href="#shield-lab">Shield Dynamics</a>
-    <a href="#dossiers">Personnel Archive</a>
-    <a href="#rogues">Threat Registry</a>
-    <a href="#modern-2026">2026 Status</a>
+    <a href="cap5.html">Historical Records</a>
+    <a href="cap6.html">Shield Dynamics</a>
+    <a href="cap3.html">Personnel Archive</a>
+    <a href="cap4.html">2026 Status</a>
 </nav>
-
 <header>
-    <h1>CAPTAIN AMERICA</h1>
-    <p style="font-size: 1.8rem; letter-spacing: 12px; color: var(--cap-gold);">OMNIBUS DATAHUB v.2026</p>
+<br>
+<hr style="color: red; height: 8px; border: none;">
+<h1>CAPTAIN AMERICA</h1>
+<h3>the human powerhouse </h3>
+<img src="shield1.png" alt="shield"id="hori-center" style="width=800px;height=500px">
+<p style="color:white;text-align:center">-by Saket Mahapatro</p>
 </header>
-
-<div class="alert-2026">
-    JANUARY 10, 2026: ADAMANTIUM ARMS RACE IN EFFECT. SAM WILSON DEPLOYS TO TIAUMUT ISLAND. AVENGERS ASSEMBLED.
-</div>
-
-<div class="container">
-
-    <!-- ============================================================
-         SECTION 1: THE MEGA-CHRONOLOGY (1941-2026)
-         ============================================================ -->
-    <section id="history">
-        <h2>Total Mission Chronology</h2>
-
-        <div class="timeline-item">
-            <span class="year-header">1941: The Genesis</span>
-            <p>Real World: Joe Simon and Jack Kirby create Steve Rogers for Timely Comics.</p>
-            <p>Fiction: Steve Rogers receives the Super Soldier Serum in a secret Brooklyn bunker. Dr. Abraham Erskine is assassinated, leaving Steve as the sole successful subject.</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="year-header">1942 - 1944: The WWII Theater</span>
-            <p>Rogers leads the Howling Commandos across Europe. Key battles include the rescue of Bucky Barnes at the Hydra research facility and the destruction of Baron Zemo's sonic weaponry.</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="year-header">1945: The Frozen Sleep</span>
-            <p>Steve Rogers stops Red Skull's "Valkyrie" bomber from destroying New York. The plane crashes in the Arctic. Rogers enters a state of cryogenic stasis.</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="year-header">1964: Silver Age Rebirth</span>
-            <p>In the comics (Earth-616), Rogers is found by the Avengers. He becomes the field leader of the team, adapting to a world without his 1940s peers.</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="year-header">2011: MCU Awakening</span>
-            <p>In the cinematic timeline, S.H.I.E.L.D. recovers Rogers. He awakens in modern-day Times Square, eventually leading the Avengers in the 2012 Battle of New York.</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="year-header">2014 - 2018: Civil War & Exile</span>
-            <p>The fall of S.H.I.E.L.D. (Hydra infiltration). The Sokovia Accords divide the Avengers. Steve Rogers operates underground as "Nomad" until the arrival of Thanos.</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="year-header">2019 - 2023: The Endgame</span>
-            <p>Half of all life is erased. Rogers leads a support group for survivors. In 2023, he returns to the past to return the Infinity Stones, retiring to live a life with Peggy Carter.</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="year-header">2024 - 2025: The Wings of Liberty</span>
-            <p>Sam Wilson accepts the Shield. He defeats the Flag Smashers and later thwarts President Thaddeus "Thunderbolt" Ross's attempt to weaponize Red Hulk biology.</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="year-header">2026: Present Day</span>
-            <p>As of Jan 10, 2026, Sam Wilson leads a new roster of Avengers. A multiversal rift confirmed in trailer leaks suggests a 2026 meeting between Sam and an elderly Steve Rogers variant.</p>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         SECTION 2: SHIELD DYNAMICS - THE DEEP DIVE
-         ============================================================ -->
-    <section id="shield-lab">
-        <h2>Shield Laboratory Specifications</h2>
-        
-        <div class="tech-grid">
-            <div class="data-card">
-                <h3>Chemical Composition</h3>
-                <p><strong>Proto-Adamantium (Comics):</strong> An accidental alloy of Vibranium, Steel, and an unknown catalyst created by Myron MacLain. It has never been duplicated.</p>
-                <p><strong>Pure Vibranium (MCU):</strong> Howard Stark forged the shield using the entirety of the U.S. government's Vibranium supply in 1943. It absorbs 100% of all kinetic energy.</p>
-            </div>
-            
-            <div class="data-card">
-                <h3>Aerodynamic Data</h3>
-                <p><strong>Ricochet Geometry:</strong> The shield's concave shape acts as an airfoil. It creates its own lift, allowing it to maintain speed even after bouncing off multiple surfaces.</p>
-                <p><strong>Balance:</strong> The center of gravity is exactly in the middle of the 30-inch diameter, allowing it to be thrown as a spinning blade or a blunt disc.</p>
-            </div>
-        </div>
-
-        <table class="mega-table">
-            <thead>
-                <tr>
-                    <th>Specification</th>
-                    <th>Detail</th>
-                    <th>Strategic Benefit</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Diameter</strong></td>
-                    <td>2.5 Feet (30 inches)</td>
-                    <td>Provides 90% torso coverage for the average human male.</td>
-                </tr>
-                <tr>
-                    <td><strong>Weight</strong></td>
-                    <td>12.0 Pounds (5.44 kg)</td>
-                    <td>Light enough for Sam Wilson to utilize in high-speed flight.</td>
-                </tr>
-                <tr>
-                    <td><strong>Kinetic Dissipation</strong></td>
-                    <td>Molecular Lattice Absorption</td>
-                    <td>Allows user to withstand strikes from Thor's Hammer (Mjolnir).</td>
-                </tr>
-                <tr>
-                    <td><strong>Edge Sharpening</strong></td>
-                    <td>Vibranium-Reinforced Edge</td>
-                    <td>Capable of embedding in Adamantium or reinforced concrete.</td>
-                </tr>
-                <tr>
-                    <td><strong>2026 Upgrades</strong></td>
-                    <td>Electromagnetic Recall</td>
-                    <td>Gauntlets synced to the shield's resonance allow for mid-air retrieval.</td>
-                </tr>
-                <tr>
-                    <td><strong>Surface Finish</strong></td>
-                    <td>Electrochemical Enamel</td>
-                    <td>Prevents erosion from atmospheric entry or chemical warfare.</td>
-                </tr>
-                <tr>
-                    <td><strong>Tensile Strength</strong></td>
-                    <td>Level 12 / Incalculable</td>
-                    <td>Resistance to high-velocity orbital re-entry heat.</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- ============================================================
-         SECTION 3: PERSONNEL ARCHIVE
-         ============================================================ -->
-    <section id="dossiers">
-        <h2>Active & Legacy Dossiers</h2>
-        
-        <div class="tech-grid">
-            <div class="data-card" style="border-top: 10px solid var(--cap-red);">
-                <h3>Steven G. Rogers</h3>
-                <p><strong>Service:</strong> 1941 - 2023</p>
-                <p><strong>Ability:</strong> Super-Soldier Serum. Peak physical condition. Enhanced healing. Master of Judo, Aikido, and Shield-Defense.</p>
-                <p><strong>2026 Intel:</strong> Memorial status remains. Multiversal rumors suggest Steve will reappear in the 2026 "Doomsday" event to mentor Sam Wilson.</p>
-            </div>
-
-            <div class="data-card" style="border-top: 10px solid var(--cap-blue);">
-                <h3>Samuel T. Wilson</h3>
-                <p><strong>Service:</strong> 2024 - Present</p>
-                <p><strong>Ability:</strong> Mastery of flight (EXO-7 Wings). Diplomatic leadership. Peak human conditioning.</p>
-                <p><strong>2026 Intel:</strong> Currently coordinating with the Wakandan Design Group to integrate vibranium drone swarms into the shield retrieval system.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         SECTION 4: THREAT REGISTRY (ROGUES GALLERY)
-         ============================================================ -->
-    <section id="rogues">
-        <h2>Primary Threat Assessment</h2>
-        <table class="mega-table">
-            <tr>
-                <th>Antagonist</th>
-                <th>Origins</th>
-                <th>2026 Threat Level</th>
-            </tr>
-            <tr>
-                <td><strong>Red Skull</strong></td>
-                <td>Hydra / WWII</td>
-                <td><strong>OMEGA:</strong> Cosmic/Multiversal threat.</td>
-            </tr>
-            <tr>
-                <td><strong>Red Hulk</strong></td>
-                <td>Thaddeus Ross / Hulk-Infused</td>
-                <td><strong>CRITICAL:</strong> Currently in Raft containment.</td>
-            </tr>
-            <tr>
-                <td><strong>The Leader</strong></td>
-                <td>Samuel Sterns / Gamma-Intelligence</td>
-                <td><strong>HIGH:</strong> Manipulating global politics.</td>
-            </tr>
-            <tr>
-                <td><strong>Baron Zemo</strong></td>
-                <td>Sokovian Elite / Tactician</td>
-                <td><strong>MODERATE:</strong> Active Advisor to the Thunderbolts.</td>
-            </tr>
-            <tr>
-                <td><strong>Arnim Zola</strong></td>
-                <td>Hydra Digital Consciousness</td>
-                <td><strong>VARIABLE:</strong> Exists in global computer networks.</td>
-            </tr>
-        </table>
-    </section>
-
-    <!-- ============================================================
-         SECTION 5: MODERN 2026 STATUS
-         ============================================================ -->
-    <section id="modern-2026">
-        <h2>The State of Liberty: Jan 2026</h2>
-        <p>As of <strong>January 10, 2026</strong>, Captain America (Sam Wilson) has established the "Global Response Unit." Following the 2025 discovery of Adamantium in the remains of the Celestial Tiamut, the world is on the brink of a new world war.</p>
-        <p>Reports from <em>Captain America: Brave New World</em> (2025) results show that the mantle of Captain America is no longer just a soldier's role, but a diplomatic one. Sam Wilson is currently mediating between Wakanda and the United States to prevent the weaponization of the new metal.</p>
-        <div class="data-card" style="margin-top: 40px; text-align: center; border-color: var(--cap-gold);">
-            <h3>2026 MOVIE INTEL</h3>
-            <p>Trailers for <strong>Avengers: Doomsday (Late 2026)</strong> confirm that Captain America will be the leader of a fragmented team of heroes, including Spider-Man and Thor, as they face a Doctor Doom variant.</p>
-        </div>
-    </section>
-
-</div>
-
-<footer>
-   <img src="shield1.png" alt="shield"id="hori-center" style="width=150;height=150">
-    <p style="font-size: 2.5rem; font-weight: 900; margin-bottom: 20px;">"I CAN DO THIS ALL DAY."</p>
-    <p>CAPTAIN AMERICA SENTINEL ARCHIVE | 1941 - 2026</p>
-    <p style="opacity: 0.5; margin-top: 20px; font-size: 0.8rem;">Data verified for January 10, 2026. All characters are property of Marvel Entertainment.</p>
-</footer>
-
 </body>
 </html>
