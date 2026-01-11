@@ -1,65 +1,128 @@
 <!doctype html>
 <html>
 <head>
+<title>The State of Liberty: Jan 2026</title>
+
 <style>
-h1{font-size: 8.7rem;text-transform:uppercase;color:white;text-align:center}
+/* PAGE RESET */
+body {
+  margin: 0;
+  padding-top: 120px; /* prevents nav overlap */
+  background-color: black;
+}
 
-p{color:white;font-size: 1.5rem}
+/* HEADINGS */
+h1 {
+  font-size: 8.7rem;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
 
-h2{font-size: 4rem;text-transform:uppercase;color:gold;text-align:center;font-family:fantasy}
+h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: gold;
+  text-align: center;
+  font-family: fantasy;
+  margin-bottom: 50px;
+}
 
-h3{color:gold;text-align:center;font-size: 3rem;text-transform:uppercase}
+h3 {
+  color: gold;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
 
-#hori-center {display: block;margin-left: auto;margin-right: auto;}
+h4 { color: gold; font-size: 2.2rem; }
+h5 { color: red; font-size: 2rem; }
 
-h4{color:gold;font-size: 2.2rem}
+/* PARAGRAPH */
+p {
+  color: white;
+  font-size: 1.5rem;
+  max-width: 900px;
+  margin: 30px auto 0;
+  line-height: 1.6;
+  text-align: left;
+}
 
-h5{color:red;font-size: 2rem}
+/* IMAGE CENTERING */
+#hori-center {
+  display: block;
+  margin: 0 auto 40px;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+}
 
-nav {background: #000;
-position: fixed;
-width: 100%;
-top: 0;
-z-index: 10000;
-border-bottom: 5px solid var(--cap-red);
-padding: 20px 0;
-text-align: center;
-box-shadow: 0 5px 20px #000;
+/* NAVBAR */
+nav {
+  background: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 5px 20px #000;
 }
 
 nav a {
-color: #fff;
-text-decoration: none;
-margin: 0 25px;
-font-weight: 900;
-text-transform: uppercase;
-font-size: 0.85rem;
-letter-spacing: 3px;
-transition: 0.4s;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 25px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
 }
-nav a:hover {
-color:blue;
-text-shadow: 0 0 15px var(--cap-gold);
+
+/* CONTENT WRAPPER */
+fieldset {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 30px;
+  border: none;
 }
 </style>
-<title>The State of Liberty: Jan 2026</title>
 </head>
-<body style="background-color:black">
-<nav> 
-<a href="index.html">Home</a>
-<a href="cap5.html">Historical Records</a>
-<a href="cap6.html">Shield Dynamics</a>
-<a href="cap3.html">Personnel Archive</a>
-	</nav>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="cap5.html">Historical Records</a>
+  <a href="cap6.html">Shield Dynamics</a>
+  <a href="cap3.html">Personnel Archive</a>
+</nav>
+
 <fieldset>
 <section id="dossiers">
-<h2 style = "color:red">the state<span style="color:slategrey"> of liberty</span> <span style="color:mediumblue"> : Jan 2026</span></h2><br><br>
 
-<img src="Untitled3.png"  id="hori-center" alt="cap" style="width:750; height:450px;">
-<p>As of January 10, 2026, Captain America (Sam Wilson) has established the "Global Response Unit." Following the 2025 discovery of Adamantium in the remains of the Celestial Tiamut, the world is on the brink of a new world war.<br>
+<h2>
+  <span style="color:red">The State</span>
+  <span style="color:slategrey"> of Liberty</span>
+  <span style="color:mediumblue"> : Jan 2026</span>
+</h2>
 
-Reports from Captain America: Brave New World (2025) results show that the mantle of Captain America is no longer just a soldier's role, but a diplomatic one. Sam Wilson is currently mediating between Wakanda and the United States to prevent the weaponization of the new metal.
+<img src="Untitled3.png" id="hori-center" alt="Captain America" style="width:500px;height:200px">
+
+<p>
+As of January 10, 2026, Captain America (Sam Wilson) has established the
+<strong>Global Response Unit</strong>. Following the 2025 discovery of
+Adamantium in the remains of the Celestial Tiamut, the world stands on the
+brink of a new global conflict.
+<br><br>
+Reports from <em>Captain America: Brave New World</em> indicate that the
+mantle of Captain America is no longer purely military, but diplomatic.
+Sam Wilson is currently mediating between Wakanda and the United States
+to prevent the weaponization of the new metal.
 </p>
+
+</section>
+</fieldset>
+
 </body>
 </html>
-

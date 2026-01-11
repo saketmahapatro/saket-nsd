@@ -1,144 +1,188 @@
 <!doctype html>
 <html>
 <head>
+<title>The Shield Laboratory Specifications</title>
+
 <style>
-.mega-table {
-width: 100%;
-border-collapse: collapse;
-margin-top: 60px;
+/* GENERAL RESET */
+body {
+  margin: 0;
+  padding-top: 120px; /* prevents nav overlap */
 }
 
-mega-table th, .mega-table td {
- padding: 30px;
-text-align: left;
-border-bottom: 1px solid #1e293b;
+/* HEADINGS */
+h1 {
+  font-size: 8.7rem;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: gold;
+  text-align: center;
+  font-family: fantasy;
+  margin-bottom: 50px;
+}
+
+h3 {
+  color: darkcyan;
+  font-size: 3rem;
+  text-transform: uppercase;
+  max-width: 1000px;
+  margin: 50px auto 15px;
+  text-align: left;
+}
+
+h4 { color: darkcyan; font-size: 2.2rem; }
+h5 { color: red; font-size: 2rem; }
+
+/* PARAGRAPHS */
+p {
+  color: black;
+  font-size: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+/* TABLE */
+.mega-table {
+  width: 100%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  margin: 60px auto;
+}
+
+.mega-table th,
+.mega-table td {
+  padding: 30px;
+  text-align: left;
+  border-bottom: 1px solid #1e293b;
 }
 
 .mega-table th {
- background: #000;
-color: var(--cap-gold);
-font-size: 1.2rem;
- text-transform: uppercase;
+  background: #000;
+  color: gold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
-h1{font-size: 8.7rem;text-transform:uppercase;color:white;text-align:center}
 
-p{color:black;font-size: 1.5rem}
+td { color: black; }
 
-h2{font-size: 4rem;text-transform:uppercase;color:gold;text-align:center;font-family:fantasy}
-
-h3{color:darkcyan;text-align:center;font-size: 3rem;text-transform:uppercase}
-
-#hori-center {display: block;margin-left: auto;margin-right: auto;}
-
-h4{color:darkcyan;font-size: 2.2rem}
-
-h5{color:red;font-size: 2rem}
-
-td{color: black}
-
-th{color:gold}
-
-#hori-center {
-display: block;
-margin-left: auto;
-margin-right: auto;}
-
-nav {background: #000;
-position: fixed;
-width: 100%;
-top: 0;
-z-index: 10000;
-border-bottom: 5px solid var(--cap-red);
-padding: 20px 0;
-text-align: center;
-box-shadow: 0 5px 20px #000;
+/* NAVBAR */
+nav {
+  background: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 5px 20px #000;
 }
 
 nav a {
-color: #fff;
-text-decoration: none;
-margin: 0 25px;
-font-weight: 900;
-text-transform: uppercase;
-font-size: 0.85rem;
-letter-spacing: 3px;
-transition: 0.4s;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 25px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
 }
-nav a:hover {
-color:blue;
-text-shadow: 0 0 15px var(--cap-gold);
-} 
+
+/* CONTENT WRAPPER */
+fieldset {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 30px;
+  border: none;
+}
 </style>
-<title>The Shield Laboratory Specifications</title> 
 </head>
 
 <body style="
-  background: rgba(255,255,255,0.7) url('shield1.png') no-repeat center fixed; 
-  background-size: contain; 
+  background: rgba(255,255,255,0.7) url('shield1.png') no-repeat center fixed;
+  background-size: contain;
   background-blend-mode: lighten;
 ">
+
 <nav>
-<a href="index.html">Home</a>
-<a href="cap5.html">Historical Records</a>
-<a href="cap3.html">Personnel Archive</a>
-<a href="cap4.html">2026 Status</a>
-	</nav>
+  <a href="index.html">Home</a>
+  <a href="cap5.html">Historical Records</a>
+  <a href="cap3.html">Personnel Archive</a>
+  <a href="cap4.html">2026 Status</a>
+</nav>
+
 <fieldset>
 <section id="shield-lab">
-<h2 style = "color:red">Shield<span style="color:slategrey"> Laboratory</span> <span style="color:mediumblue">Specifications</span></h2><br><br>
 
-<h3 style="text-align:left">Chemical Composition</h3>
-<p><strong>Proto-Adamantium (Comics):</strong> An accidental alloy of Vibranium, Steel, and an unknown catalyst created by Myron MacLain. It has never been duplicated.</p>
-<p><strong>Pure Vibranium (MCU):</strong> Howard Stark forged the shield using the entirety of the U.S. government's Vibranium supply in 1943. It absorbs 100% of all kinetic energy.</p>
-<h3 style="text-align:left">Aerodynamic Data</h3>
-<p><strong>Ricochet Geometry:</strong> The shield's concave shape acts as an airfoil. It creates its own lift, allowing it to maintain speed even after bouncing off multiple surfaces.</p>
-<p><strong>Balance:</strong> The center of gravity is exactly in the middle of the 30-inch diameter, allowing it to be thrown as a spinning blade or a blunt disc.</p>
+<h2>
+  <span style="color:red">Shield</span>
+  <span style="color:slategrey"> Laboratory</span>
+  <span style="color:mediumblue"> Specifications</span>
+</h2>
+
+<h3>Chemical Composition</h3>
+<p><strong>Proto-Adamantium (Comics):</strong> An accidental alloy of Vibranium, Steel, and an unknown catalyst created by Myron MacLain.</p>
+<p><strong>Pure Vibranium (MCU):</strong> Forged by Howard Stark using all known Vibranium reserves in 1943. Absorbs 100% of kinetic energy.</p>
+
+<h3>Aerodynamic Data</h3>
+<p><strong>Ricochet Geometry:</strong> Concave design creates lift, allowing controlled multi-surface rebounds.</p>
+<p><strong>Balance:</strong> Center of gravity is perfectly aligned in the 30-inch diameter.</p>
+
 <table class="mega-table">
- <thead>
- <tr>
+<thead>
+<tr>
   <th>Specification</th>
-   <th>Detail</th>
+  <th>Detail</th>
   <th>Strategic Benefit</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Diameter</strong></td>
-<td>2.5 Feet (30 inches)</td>
-<td>Provides 90% torso coverage for the average human male.</td>
+  <td><strong>Diameter</strong></td>
+  <td>2.5 Feet (30 inches)</td>
+  <td>90% torso coverage</td>
 </tr>
 <tr>
-<td><strong>Weight</strong></td>
-<td>12.0 Pounds (5.44 kg)</td>
-<td>Light enough for Sam Wilson to utilize in high-speed flight.</td>
+  <td><strong>Weight</strong></td>
+  <td>12.0 Pounds (5.44 kg)</td>
+  <td>Flight-compatible for Sam Wilson</td>
 </tr>
 <tr>
-<td><strong>Kinetic Dissipation</strong></td>
-<td>Molecular Lattice Absorption</td>
-<td>Allows user to withstand strikes from Thor's Hammer (Mjolnir).</td>
+  <td><strong>Kinetic Dissipation</strong></td>
+  <td>Molecular Lattice Absorption</td>
+  <td>Withstands Mjolnir strikes</td>
 </tr>
 <tr>
-<td><strong>Edge Sharpening</strong></td>
-<td>Vibranium-Reinforced Edge</td>
-<td>Capable of embedding in Adamantium or reinforced concrete.</td>
+  <td><strong>Edge Sharpening</strong></td>
+  <td>Vibranium-Reinforced</td>
+  <td>Penetrates reinforced materials</td>
 </tr>
 <tr>
-<td><strong>2026 Upgrades</strong></td>
-<td>Electromagnetic Recall</td>
-<td>Gauntlets synced to the shield's resonance allow for mid-air retrieval.</td>
+  <td><strong>2026 Upgrades</strong></td>
+  <td>Electromagnetic Recall</td>
+  <td>Mid-air retrieval</td>
 </tr>
 <tr>
-<td><strong>Surface Finish</strong></td>
-<td>Electrochemical Enamel</td>
-<td>Prevents erosion from atmospheric entry or chemical warfare.</td>
+  <td><strong>Surface Finish</strong></td>
+  <td>Electrochemical Enamel</td>
+  <td>Environmental resistance</td>
 </tr>
 <tr>
-<td><strong>Tensile Strength</strong></td>
-<td>Level 12 / Incalculable</td>
-<td>Resistance to high-velocity orbital re-entry heat.</td>
+  <td><strong>Tensile Strength</strong></td>
+  <td>Level 12 / Incalculable</td>
+  <td>Orbital re-entry durability</td>
 </tr>
 </tbody>
 </table>
+
+</section>
 </fieldset>
+
 </body>
 </html>

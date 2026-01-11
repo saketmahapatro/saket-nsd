@@ -1,101 +1,152 @@
 <!doctype html>
 <html>
 <head>
+<title>Active & Legacy Dossiers</title>
+
 <style>
-h1{font-size: 8.7rem;text-transform:uppercase;color:white;text-align:center}
+/* PAGE RESET */
+body {
+  margin: 0;
+  padding-top: 120px; /* prevents nav overlap */
+}
 
-p{color:white;font-size: 1.5rem}
+/* HEADINGS */
+h1 { font-size: 8.7rem; text-transform: uppercase; color: white; text-align: center; }
 
-h2{font-size: 4rem;text-transform:uppercase;color:turquoise;text-align:center;font-family:fantasy}
+h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: turquoise;
+  text-align: center;
+  font-family: fantasy;
+  margin-bottom: 50px;
+}
 
-h3{color:gold;text-align:center;font-size: 3rem;text-transform:uppercase}
+h3 { color: gold; text-align: center; font-size: 3rem; text-transform: uppercase; }
 
-#hori-center {display: block;margin-left: auto;margin-right: auto;}
+h4 { color: gold; font-size: 2.2rem; }
+h5 { color: red; font-size: 2rem; }
 
-h4{color:gold;font-size: 2.2rem}
+/* TEXT */
+p {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
 
-h5{color:red;font-size: 2rem}
-
+/* GRID */
 .tech-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-gap: 50px;
-margin-top: 50px;}
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+  margin: 50px auto;
+  max-width: 1100px;
+}
 
+/* CARDS */
 .data-card {
-background: #000;
-padding: 40px;
-border: 2px solid #1e293b;
-border-radius: 20px;
-transition: 0.5s;}
+  background: #000;
+  padding: 40px;
+  border: 2px solid #1e293b;
+  border-radius: 20px;
+}
 
-nav {background: #000;
-position: fixed;
-width: 100%;
-top: 0;
-z-index: 10000;
-border-bottom: 5px solid var(--cap-red);
-padding: 20px 0;
-text-align: center;
-box-shadow: 0 5px 20px #000;
+/* IMAGE SECTION */
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 60px auto 0;
+  gap: 40px;
+}
+
+.image-block {
+  width: 48%;
+  text-align: center;
+}
+
+.image-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* NAVBAR */
+nav {
+  background: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 5px 20px #000;
 }
 
 nav a {
-color: #fff;
-text-decoration: none;
-margin: 0 25px;
-font-weight: 900;
-text-transform: uppercase;
-font-size: 0.85rem;
-letter-spacing: 3px;
-transition: 0.4s;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 25px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
 }
-nav a:hover {
-color:blue;
-text-shadow: 0 0 15px var(--cap-gold);
-}
-
 </style>
-<title>Active & Legacy Dossiers</title>
 </head>
+
 <body style="
-  background: rgba(255,255,255,0.7) url('shield1.png') no-repeat center fixed; 
-  background-size: contain; 
+  background: rgba(255,255,255,0.7) url('shield1.png') no-repeat center fixed;
+  background-size: contain;
   background-blend-mode: lighten;
 ">
-<nav> 
-<a href="index.html">Home</a>
-<a href="cap5.html">Historical Records</a>
-<a href="cap6.html">Shield Dynamics</a>
-<a href="cap4.html">2026 Status</a>
-	</nav>
-<fieldset>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="cap5.html">Historical Records</a>
+  <a href="cap6.html">Shield Dynamics</a>
+  <a href="cap4.html">2026 Status</a>
+</nav>
+
+<fieldset style="border:none; max-width:1200px; margin:auto; padding:40px;">
 <section id="dossiers">
-<h2 style = "color:red">Active & <span style="color:slategrey"> legacy </span> <span style="color:mediumblue">dossiers</span></h2><br><br>
+
+<h2>
+  <span style="color:red">Active &</span>
+  <span style="color:slategrey"> Legacy </span>
+  <span style="color:mediumblue">Dossiers</span>
+</h2>
 
 <div class="tech-grid">
-<div class="data-card" style="border-top: 10px solid var(--cap-red);">
-  <h3>Steven G. Rogers</h3>
-<p><strong>Service:</strong> 1941 - 2023</p>
-<p><strong>Ability:</strong> Super-Soldier Serum. Peak physical condition. Enhanced healing. Master of Judo, Aikido, and Shield-Defense.</p>
-<p><strong>2026 Intel:</strong> Memorial status remains. Multiversal rumors suggest Steve will reappear in the 2026 "Doomsday" event to mentor Sam Wilson.</p>
-</div>
-<div class="data-card" style="border-top: 10px solid var(--cap-blue);">
-                <h3>Samuel T. Wilson</h3>
-                <p><strong>Service:</strong> 2024 - Present</p>
-                <p><strong>Ability:</strong> Mastery of flight (EXO-7 Wings). Diplomatic leadership. Peak human conditioning.</p>
-                <p><strong>2026 Intel:</strong> Currently coordinating with the Wakandan Design Group to integrate vibranium drone swarms into the shield retrieval system.</p>
-            </div>
-        </div>
-    </section>
-	<br>
-	<br>
-	<h5 style ="text-align:left;color:white">Steven G. Rogers</h5>
-<img src="Untitled.png" align="left" alt="good" >
+  <div class="data-card" style="border-top: 10px solid var(--cap-red);">
+    <h3>Steven G. Rogers</h3>
+    <p><strong>Service:</strong> 1941 – 2023</p>
+    <p><strong>Ability:</strong> Super-Soldier Serum. Peak physical condition. Enhanced healing.</p>
+    <p><strong>2026 Intel:</strong> Memorial status remains. Multiversal rumors suggest return in the 2026 “Doomsday” event.</p>
+  </div>
 
-<h5 style ="text-align:right;color:white">Samuel T. Wilson</h5>
-<img src="Untitled1.png" align="right" alt="good">
+  <div class="data-card" style="border-top: 10px solid var(--cap-blue);">
+    <h3>Samuel T. Wilson</h3>
+    <p><strong>Service:</strong> 2024 – Present</p>
+    <p><strong>Ability:</strong> EXO-7 Wings mastery. Diplomatic leadership.</p>
+    <p><strong>2026 Intel:</strong> Coordinating vibranium drone swarm integration.</p>
+  </div>
+</div>
+
+<div class="image-row">
+  <div class="image-block">
+    <h5 style="color:white;">Steven G. Rogers</h5>
+    <img src="Untitled.png" alt="Steven Rogers">
+  </div>
+
+  <div class="image-block">
+    <h5 style="color:white;">Samuel T. Wilson</h5>
+    <img src="Untitled1.png" alt="Sam Wilson">
+  </div>
+</div>
+
+</section>
+</fieldset>
 
 </body>
-
 </html>

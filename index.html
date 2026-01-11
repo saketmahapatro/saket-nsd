@@ -1,89 +1,99 @@
 <!doctype html>
 <html>
 <head>
+<title>Captain America: The Heart and Soul of the Avengers</title>
+
 <style>
-h1{font-size: 6.6rem;text-transform:uppercase;color:white;text-align:center;font-family:fantasy;letter-spacing: 3px;
-  }
+/* RESET & VIEWPORT CONTROL */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* prevents scrolling */
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
 
-p{color:white;font-size: 1.5rem}
-
-h2{font-size: 2rem;text-transform:uppercase;color:gold;text-align:center}
-
-h3{color:orange;text-align:center;font-size: 2rem;text-transform:uppercase;font-family:cursive}
-
-#hori-center {display: block;margin-left: auto;margin-right: auto;}
-
-h4{color:gold;font-size: 2.2rem}
-
-h5{color:red;font-size: 2rem}
-
-nav {background: #000;
-position: fixed;
-width: 100%;
-top: 0;
-z-index: 10000;
-border-bottom: 5px solid var(--cap-red);
-padding: 20px 0;
-text-align: center;
-box-shadow: 0 5px 20px #000;
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  padding: 12px 0;
+  z-index: 1000;
 }
 
 nav a {
-color: #fff;
-text-decoration: none;
-margin: 0 25px;
-font-weight: 900;
-text-transform: uppercase;
-font-size: 0.85rem;
-letter-spacing: 3px;
-transition: 0.4s;
-}
-nav a:hover {
-color:blue;
-text-shadow: 0 0 15px var(--cap-gold);
-}
- .element {
-  background: radial-gradient(center, blue);
-}
- 
-		.container {
-  position: relative;
-  display: inline-block; /* Fits the size of the image */
+  color: #fff;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
 }
 
-.main-img {
-  display: block;
-  width: 100%; /* Adjust as needed */
+/* MAIN CONTAINER */
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px; /* navbar height */
+  box-sizing: border-box;
 }
 
-.watermark-img {
-  position: absolute;
-  bottom: 100000000px;  
-  right: 100000000px;   
-  width: 50000000px;   
-  opacity: 0.4;  
-  pointer-events: none; 
+/* TEXT */
+h1 {
+  font-size: 4.5rem; /* reduced to avoid scroll */
+  letter-spacing: 3px;
+  font-family: fantasy;
+  margin: 10px 0;
+}
+
+h3 {
+  color: orange;
+  font-size: 1.6rem;
+  font-family: cursive;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* IMAGE */
+#hori-center {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
 }
 </style>
-<title>Captain America:The Heart and Soul of the Avengers</title>
 </head>
-<body style="background-color:black">
 
+<body>
 
-<hr style="background-color: red; height: 8px; border: none;">
 <nav>
-    <a href="cap5.html">Historical Records</a>
-    <a href="cap6.html">Shield Dynamics</a>
-    <a href="cap3.html">Personnel Archive</a>
-    <a href="cap4.html">2026 Status</a>
+  <a href="cap5.html">Historical Records</a>
+  <a href="cap6.html">Shield Dynamics</a>
+  <a href="cap3.html">Personnel Archive</a>
+  <a href="cap4.html">2026 Status</a>
 </nav>
-<header>
-<br>
-<hr style="color: red; height: 8px; border: none;">
-<h1>CAPTAIN AMERICA</h1>
-<h3>the human powerhouse </h3>
-<img src="shield1.png" alt="shield"id="hori-center" style="width=800px;height=500px">
-<p style="color:white;text-align:center">-by Saket Mahapatro</p>
-</header>
+
+<div class="main">
+  <h1>Captain America</h1>
+  <h3>The Human Powerhouse</h3>
+
+  <img src="shield1.png" alt="Shield" id="hori-center">
+
+  <p>- By Saket Mahapatro</p>
+</div>
+
 </body>
 </html>
